@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ DEEPFACE — The Face That Drops Bass</title>
+    <meta name="description" content="DJ DEEPFACE — Yerevan's most legendary DJ. Smoother transitions than your therapist. Book the face. Feel the bass.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated background particles -->
+    <canvas id="particles"></canvas>
+
+    <!-- Floating equalizer bars -->
+    <div class="eq-bars" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-pre animate-in">🎧 YEREVAN'S #1* DJ EXPERIENCE — FACE SO DEEP YOU CAN'T EVEN SEE IT</p>
+            <h1 class="hero-title glitch" data-text="DJ DEEPFACE">DJ DEEPFACE</h1>
+            <p class="hero-tagline animate-in delay-1">Face So Deep, NASA Couldn't Map It</p>
+            <p class="hero-sub animate-in delay-2">*self-proclaimed. literally nobody else was asked, consulted, or even aware this was happening.</p>
+            <div class="hero-cta animate-in delay-3">
+                <a href="https://www.instagram.com/dj_deepface" target="_blank" rel="noopener" class="btn btn-primary pulse-glow">
+                    <span class="btn-icon">📸</span> Follow The Legend
+                </a>
+                <a href="#booking" class="btn btn-secondary">
+                    <span class="btn-icon">🎤</span> Book This Man
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator animate-in delay-4">
+            <span>scroll if you dare</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- PHOTO SECTION -->
+    <section class="photo-section" id="photo">
+        <div class="container">
+            <div class="photo-frame">
+                <div class="photo-placeholder" id="djPhoto">
+                    <div class="placeholder-icon">🎧</div>
+                    <p>THE FACE</p>
+                    <span class="placeholder-sub">(photo loading... he's been "getting ready" for 3 hours)</span>
+                </div>
+                <div class="photo-badge badge-top-left">⚡ VERIFIED LEGEND</div>
+                <div class="photo-badge badge-top-right">🔥 FACE: DEEP</div>
+                <div class="photo-badge badge-bottom-left">🎵 BASS: DROPPED</div>
+                <div class="photo-badge badge-bottom-right">💃 VIBES: IMMACULATE</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS TICKER -->
+    <section class="stats-ticker">
+        <div class="ticker-track">
+            <div class="ticker-content">
+                <span class="ticker-item">🎵 2,847 SONGS "MIXED" (HE PRESSED PLAY)</span>
+                <span class="ticker-sep">★</span>
+                <span class="ticker-item">😎 212 FOLLOWERS — HALF ARE BOTS, THE OTHER HALF ARE HIS MOM'S ACCOUNTS</span>
+                <span class="ticker-sep">★</span>
+                <span class="ticker-item">🔥 FACE DEPTH: UNMEASURABLE — SCIENTISTS GAVE UP</span>
+                <span class="ticker-sep">★</span>
+                <span class="ticker-item">🎧 14 HEADPHONES BROKEN — 13 WERE ALREADY BROKEN WHEN HE BOUGHT THEM</span>
+                <span class="ticker-sep">★</span>
+                <span class="ticker-item">💀 0 PEOPLE HAVE EVER SEEN THE BOTTOM OF HIS FACE</span>
+                <span class="ticker-sep">★</span>
+                <span class="ticker-item">🏛️ BANNED FROM 0 VENUES (BECAUSE THEY DON'T KNOW HE EXISTS)</span>
+                <span class="ticker-sep">★</span>
+                <span class="ticker-item">💩 PLAYED AT A FUNERAL ONCE — THE CORPSE ASKED HIM TO STOP</span>
+                <span class="ticker-sep">★</span>
+                <span class="ticker-item">🎵 2,847 SONGS "MIXED" (HE PRESSED PLAY)</span>
+                <span class="ticker-sep">★</span>
+                <span class="ticker-item">😎 212 FOLLOWERS — HALF ARE BOTS, THE OTHER HALF ARE HIS MOM'S ACCOUNTS</span>
+                <span class="ticker-sep">★</span>
+                <span class="ticker-item">🔥 FACE DEPTH: UNMEASURABLE — SCIENTISTS GAVE UP</span>
+                <span class="ticker-sep">★</span>
+                <span class="ticker-item">🎧 14 HEADPHONES BROKEN — 13 WERE ALREADY BROKEN WHEN HE BOUGHT THEM</span>
+                <span class="ticker-sep">★</span>
+                <span class="ticker-item">💀 0 PEOPLE HAVE EVER SEEN THE BOTTOM OF HIS FACE</span>
+                <span class="ticker-sep">★</span>
+                <span class="ticker-item">🏛️ BANNED FROM 0 VENUES (BECAUSE THEY DON'T KNOW HE EXISTS)</span>
+                <span class="ticker-sep">★</span>
+                <span class="ticker-item">💩 PLAYED AT A FUNERAL ONCE — THE CORPSE ASKED HIM TO STOP</span>
+                <span class="ticker-sep">★</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT / BIO -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-accent">WHO THE HELL IS</span>
+                <br>DEEPFACE?
+            </h2>
+            <div class="about-grid">
+                <div class="about-card card-glass">
+                    <div class="card-emoji">🧬</div>
+                    <h3>Origin Story</h3>
+                    <p>Born with a face so deep, doctors couldn't find his cheekbones. They tried ultrasound, MRI, even Google Maps — nothing. Legend says he came out of the womb already beatmatching to his mother's heartbeat. She was not impressed. Raised on the streets of Yerevan, where he learned two things: how to press play on a laptop and how to look serious doing it.</p>
+                </div>
+                <div class="about-card card-glass">
+                    <div class="card-emoji">🎚️</div>
+                    <h3>The "Style"</h3>
+                    <p>Transitions smoother than his excuses for being 2 hours late. Drops so filthy, the cleaning lady filed a complaint. His face is so deep that when he nods to the beat, it creates a gravitational pull. Electro. House. Techno. Absolute horseshit sometimes. But <em>vibes.</em></p>
+                </div>
+                <div class="about-card card-glass">
+                    <div class="card-emoji">👗</div>
+                    <h3>The Dress Code</h3>
+                    <p>This man will literally kick you out if you show up in sweatpants. He once told a guy in Adidas tracksuit to "go home and rethink your entire life." Direct quote: <em>"Никаких спортивок — только стиль, свет и энергия!"</em> Meanwhile he shows up in the same black t-shirt every time. The audacity. The hypocrisy. The DEEP FACE.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAKE ACHIEVEMENTS -->
+    <section class="achievements" id="achievements">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-accent">TOTALLY REAL</span>
+                <br>ACHIEVEMENTS
+            </h2>
+            <div class="achievement-list">
+                <div class="achievement-item">
+                    <div class="achievement-year">2023</div>
+                    <div class="achievement-content">
+                        <h3>🏆 "DJ Most Likely To Play At Your Cousin's Wedding For Free"</h3>
+                        <p>— Yerevan Monthly (publication doesn't exist, we checked)</p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-year">2024</div>
+                    <div class="achievement-content">
+                        <h3>🥇 World Record: Longest DJ Set Before Someone Complained</h3>
+                        <p>— 47 minutes. He had to pee. The crowd didn't notice he left. Or came back.</p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-year">2024</div>
+                    <div class="achievement-content">
+                        <h3>🎖️ Got Rejected By His Own Face Control</h3>
+                        <p>— Bouncer at Illusion YVN said "your face is too deep, I can't verify it." He had to show his Instagram (all 212 followers) as proof.</p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-year">2025</div>
+                    <div class="achievement-content">
+                        <h3>📈 Instagram: 212 Followers And Absolutely ZERO Shame About It</h3>
+                        <p>— 70 are bots, 40 are his mom's backup accounts, 12 are ex-girlfriends who forgot to unfollow, and the rest are people who thought he was the AI deepfake app.</p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-year">2025</div>
+                    <div class="achievement-content">
+                        <h3>💀 Made A Girl Cry With A Bass Drop</h3>
+                        <p>— She wasn't moved emotionally. Her drink just spilled on her new dress. He didn't apologize. He never does.</p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-year">2026</div>
+                    <div class="achievement-content">
+                        <h3>🌍 Got His Own Website (You're On It, Idiot)</h3>
+                        <p>— His friend made it as a joke. DEEPFACE thinks it's real. Nobody has the heart to tell him. This is the peak. It's all downhill from here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-accent">WHAT PEOPLE</span>
+                <br>DEFINITELY SAID
+            </h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card card-glass">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"I tried to look at his face and fell in. It's been 3 days. Send help. The bass is incredible down here though."</p>
+                    <div class="testimonial-author">
+                        <span class="author-avatar">🕳️</span>
+                        <div>
+                            <strong>Guy Who Stared Too Long</strong>
+                            <span class="author-sub">Currently Trapped In The Face</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card card-glass">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"He played at my wedding. Now I'm divorced, my house burned down, and my dog left me. But the music was absolutely fire. Would book again."</p>
+                    <div class="testimonial-author">
+                        <span class="author-avatar">👰</span>
+                        <div>
+                            <strong>Anonymous Bride</strong>
+                            <span class="author-sub">Lost Everything But The Vibes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card card-glass">
+                    <div class="stars">★☆☆☆☆</div>
+                    <p class="testimonial-text">"This absolute donkey played the same song twice and nobody noticed because they were all too drunk. Genius or idiot? Yes."</p>
+                    <div class="testimonial-author">
+                        <span class="author-avatar">🫠</span>
+                        <div>
+                            <strong>Sober Guy at The Gate</strong>
+                            <span class="author-sub">The Only One Who Noticed</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card card-glass">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"DEEPFACE dropped the bass so hard, three tables broke, a girl cried, and the bartender quit on the spot. He just nodded and kept going. Stone cold psychopath. 10/10."</p>
+                    <div class="testimonial-author">
+                        <span class="author-avatar">💀</span>
+                        <div>
+                            <strong>Club Owner (Now Bankrupt)</strong>
+                            <span class="author-sub">Insurance Claim #47</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card card-glass">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"I don't even like music. I don't even like clubs. I don't even like people. But DEEPFACE? That stupid deep face got me. I'd die for that man and his 212 followers."</p>
+                    <div class="testimonial-author">
+                        <span class="author-avatar">🤷</span>
+                        <div>
+                            <strong>His Mom</strong>
+                            <span class="author-sub">The Only Real Fan</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card card-glass">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"His face is so deep I thought it was a black hole. Turns out it's just his personality. The music slaps though, I'll give him that."</p>
+                    <div class="testimonial-author">
+                        <span class="author-avatar">🧑‍🔬</span>
+                        <div>
+                            <strong>NASA Researcher (Allegedly)</strong>
+                            <span class="author-sub">Studying The Face Since 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VENUES -->
+    <section class="venues" id="venues">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-accent">RESIDENCIES &</span>
+                <br>CRIME SCENES
+            </h2>
+            <div class="venue-grid">
+                <div class="venue-card">
+                    <div class="venue-icon">🏛️</div>
+                    <h3>Illusion YVN</h3>
+                    <p class="venue-addr">Pushkin 51</p>
+                    <p class="venue-desc">Where DEEPFACE pretends he's a Greek god. The bouncer still doesn't recognize him. Every. Single. Time.</p>
+                </div>
+                <div class="venue-card">
+                    <div class="venue-icon">📸</div>
+                    <h3>Paparazzi Club</h3>
+                    <p class="venue-addr">Yerevan</p>
+                    <p class="venue-desc">They named it Paparazzi because everyone wants a photo with him. Nobody has actually asked for one yet, but he's ready.</p>
+                </div>
+                <div class="venue-card">
+                    <div class="venue-icon">🚪</div>
+                    <h3>The Gate</h3>
+                    <p class="venue-addr">Yerevan</p>
+                    <p class="venue-desc">He calls it "the gate to his soul." Everyone else calls it "that club where the weird DJ won't stop staring at the crowd."</p>
+                </div>
+                <div class="venue-card">
+                    <div class="venue-icon">🏚️</div>
+                    <h3>Basement</h3>
+                    <p class="venue-addr">Literally Underground</p>
+                    <p class="venue-desc">Literally underground. Just like his career. But hey, even diamonds start in the dirt. DEEPFACE is more like a potato, but same energy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RIDER / REQUIREMENTS -->
+    <section class="rider" id="rider">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-accent">OFFICIAL</span>
+                <br>DJ RIDER
+            </h2>
+            <p class="rider-intro">To book DJ DEEPFACE, the following requirements must be met:</p>
+            <div class="rider-grid">
+                <div class="rider-item card-glass">
+                    <span class="rider-icon">🎚️</span>
+                    <p>A DJ booth that is <strong>elevated at least 30cm</strong> above the crowd. The Face must be SEEN.</p>
+                </div>
+                <div class="rider-item card-glass">
+                    <span class="rider-icon">🧊</span>
+                    <p>Exactly <strong>3 bottles of water</strong>. Not 2. Not 4. Three. It's about the vibe.</p>
+                </div>
+                <div class="rider-item card-glass">
+                    <span class="rider-icon">💡</span>
+                    <p>A spotlight dedicated <strong>exclusively to his face</strong>. Hence the name.</p>
+                </div>
+                <div class="rider-item card-glass">
+                    <span class="rider-icon">🚫</span>
+                    <p>Absolutely <strong>NO song requests</strong>. He knows what you need better than you do.</p>
+                </div>
+                <div class="rider-item card-glass">
+                    <span class="rider-icon">👔</span>
+                    <p>All staff must comply with the <strong>dress code</strong>. Yes, even the bartender.</p>
+                </div>
+                <div class="rider-item card-glass">
+                    <span class="rider-icon">🪞</span>
+                    <p>A <strong>mirror in the DJ booth</strong>. He needs to see the face. The deep face.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING CTA -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <div class="booking-card card-glass">
+                <h2 class="booking-title">READY TO BOOK<br><span class="text-gradient">THE DEEPEST FACE</span><br>IN THE GAME?</h2>
+                <p class="booking-sub">Slide into his DMs. It's the only way. He has no manager because no manager would take him. No agent because he can't afford one. Just a man, a cracked laptop, one USB stick, and 212 Instagram followers — most of whom think he's a deepfake AI bot.</p>
+                <div class="booking-cta">
+                    <a href="https://www.instagram.com/dj_deepface" target="_blank" rel="noopener" class="btn btn-primary btn-large pulse-glow">
+                        <span class="btn-icon">📩</span> SLIDE INTO HIS DMs (HE'S DESPERATE)
+                    </a>
+                </div>
+                <p class="booking-disclaimer">* Response time: 1-47 business days. He'll reply faster if you compliment his face. Calling it "deep" helps. Pricing: negotiable. Ego: non-negotiable.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo glitch-mini" data-text="DEEPFACE">DEEPFACE</div>
+            <p class="footer-tagline">The Face. The Bass. The Legend.</p>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/dj_deepface" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+            </div>
+            <p class="footer-copy">© 2026 DJ DEEPFACE. All rights reserved. No rights were actually filed. He doesn't even know what a copyright is.</p>
+            <p class="footer-fine">This website was made by a friend as a joke. DEEPFACE doesn't know it exists yet. When he finds out, he'll either cry or use it unironically. Both are equally likely.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
