@@ -208,15 +208,15 @@ if (photoEl) {
 
 // ===== FLYING DONKEYS =====
 function spawnDonkey() {
-    const donkey = document.createElement('div');
-    donkey.textContent = '🫏'; // donkey emoji
+    const donkey = document.createElement('img');
+    donkey.src = 'donkey-isolated-transparent-background-donkey-transparent-background-360937628.webp';
     donkey.style.position = 'fixed';
-    donkey.style.fontSize = (Math.random() * 3 + 2) + 'rem';
+    donkey.style.width = (Math.random() * 200 + 150) + 'px'; // 150px to 350px (Bigger donkeys)
     donkey.style.zIndex = '9999';
     donkey.style.pointerEvents = 'none';
     donkey.style.transition = 'transform 8s linear, opacity 8s linear';
     // Add neon glow to the donkey
-    donkey.style.filter = `drop-shadow(0 0 10px ${['#ff2d95','#00d4ff','#b14dff','#39ff14'][Math.floor(Math.random()*4)]})`;
+    donkey.style.filter = `drop-shadow(0 0 20px ${['#ff2d95','#00d4ff','#b14dff','#39ff14'][Math.floor(Math.random()*4)]})`;
     
     const startY = Math.random() * window.innerHeight;
     const direction = Math.random() > 0.5 ? 1 : -1; // 1 for left-to-right, -1 for right-to-left
