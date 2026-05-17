@@ -205,3 +205,40 @@ if (photoEl) {
         }
     });
 }
+
+// ===== FLYING DONKEYS =====
+function spawnDonkey() {
+    const donkey = document.createElement('div');
+    donkey.textContent = '🫏'; // donkey emoji
+    donkey.style.position = 'fixed';
+    donkey.style.fontSize = (Math.random() * 3 + 2) + 'rem';
+    donkey.style.zIndex = '9999';
+    donkey.style.pointerEvents = 'none';
+    donkey.style.transition = 'transform 8s linear, opacity 8s linear';
+    // Add neon glow to the donkey
+    donkey.style.filter = `drop-shadow(0 0 10px ${['#ff2d95','#00d4ff','#b14dff','#39ff14'][Math.floor(Math.random()*4)]})`;
+    
+    const startY = Math.random() * window.innerHeight;
+    const direction = Math.random() > 0.5 ? 1 : -1; // 1 for left-to-right, -1 for right-to-left
+    const startX = direction === 1 ? -100 : window.innerWidth + 100;
+    
+    donkey.style.left = '0px';
+    donkey.style.top = '0px';
+    donkey.style.transform = `translate(${startX}px, ${startY}px) ${direction === -1 ? 'scaleX(-1)' : ''}`;
+    
+    document.body.appendChild(donkey);
+    
+    setTimeout(() => {
+        const endY = startY + (Math.random() * 400 - 200);
+        const endX = direction === 1 ? window.innerWidth + 100 : -100;
+        const rotation = (Math.random() * 720 - 360);
+        donkey.style.transform = `translate(${endX}px, ${endY}px) rotate(${rotation}deg) ${direction === -1 ? 'scaleX(-1)' : ''}`;
+    }, 50);
+    
+    setTimeout(() => {
+        donkey.remove();
+    }, 8050);
+}
+
+setInterval(spawnDonkey, 2500);
+
