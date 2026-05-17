@@ -218,21 +218,44 @@ function spawnDonkey() {
     // Add neon glow to the donkey
     donkey.style.filter = `drop-shadow(0 0 20px ${['#ff2d95','#00d4ff','#b14dff','#39ff14'][Math.floor(Math.random()*4)]})`;
     
-    const startY = Math.random() * window.innerHeight;
-    const direction = Math.random() > 0.5 ? 1 : -1; // 1 for left-to-right, -1 for right-to-left
-    const startX = direction === 1 ? -100 : window.innerWidth + 100;
+    let startX, startY, endX, endY, flip;
+    const edge = Math.floor(Math.random() * 4);
+    
+    if (edge === 0) { // Top
+        startX = Math.random() * window.innerWidth;
+        startY = -300;
+        endX = startX + (Math.random() * 800 - 400);
+        endY = window.innerHeight + 300;
+        flip = Math.random() > 0.5 ? 'scaleX(-1)' : '';
+    } else if (edge === 1) { // Right
+        startX = window.innerWidth + 300;
+        startY = Math.random() * window.innerHeight;
+        endX = -300;
+        endY = startY + (Math.random() * 800 - 400);
+        flip = 'scaleX(-1)';
+    } else if (edge === 2) { // Bottom
+        startX = Math.random() * window.innerWidth;
+        startY = window.innerHeight + 300;
+        endX = startX + (Math.random() * 800 - 400);
+        endY = -300;
+        flip = Math.random() > 0.5 ? 'scaleX(-1)' : '';
+    } else { // Left
+        startX = -300;
+        startY = Math.random() * window.innerHeight;
+        endX = window.innerWidth + 300;
+        endY = startY + (Math.random() * 800 - 400);
+        flip = '';
+    }
     
     donkey.style.left = '0px';
     donkey.style.top = '0px';
-    donkey.style.transform = `translate(${startX}px, ${startY}px) ${direction === -1 ? 'scaleX(-1)' : ''}`;
+    donkey.style.transform = `translate(${startX}px, ${startY}px) ${flip}`;
     
     document.body.appendChild(donkey);
     
     setTimeout(() => {
-        const endY = startY + (Math.random() * 400 - 200);
-        const endX = direction === 1 ? window.innerWidth + 100 : -100;
-        const rotation = (Math.random() * 720 - 360);
-        donkey.style.transform = `translate(${endX}px, ${endY}px) rotate(${rotation}deg) ${direction === -1 ? 'scaleX(-1)' : ''}`;
+        const rotation = (Math.random() * 1080 - 540); // extra spinning
+        donkey.style.transform = `translate(${endX}px, ${endY}px) rotate(${rotation}deg) ${flip}`;
     }, 50);
     
     setTimeout(() => {
